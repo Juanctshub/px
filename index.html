@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>PROYECTO X</title>
+    <meta name="description" content="Proyecto X — La fiesta del año. Confirma tu asistencia.">
+    <link rel="icon" type="image/jpeg" href="1.jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <audio id="music" src="head.mp3" preload="auto" loop></audio>
+
+    <!-- UNLOCK -->
+    <div id="unlock" class="unlock">
+        <div class="unlock-noise"></div>
+        <div class="unlock-inner">
+            <img src="o.png" alt="Project X" class="unlock-logo">
+            <div class="unlock-btn">
+                <span class="unlock-circle"></span>
+                <span class="unlock-label">TOCA PARA ENTRAR</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- INTRO -->
+    <div id="intro" class="intro">
+        <div class="intro-flash"></div>
+        <div class="intro-noise"></div>
+        <div class="intro-glitch-bar"></div>
+        <img src="s.png" alt="X" class="intro-x" id="intro-x">
+    </div>
+
+    <!-- PAGE -->
+    <div id="page" class="page">
+
+        <!-- VIDEO BG -->
+        <div class="video-wrap">
+            <video class="bg-video" autoplay muted loop playsinline>
+                <source src="video.mp4" type="video/mp4">
+            </video>
+            <div class="bg-overlay"></div>
+            <div class="bg-scanlines"></div>
+        </div>
+
+        <!-- HERO (full viewport) -->
+        <section class="sec-hero">
+            <div class="hero-inner">
+                <div class="hero-badge rv">INVITACIÓN EXCLUSIVA</div>
+                <img src="o.png" alt="Project X" class="hero-logo">
+                <div class="hero-line"></div>
+                <p class="hero-tagline rv">LA FIESTA QUE HARÁ HISTORIA</p>
+            </div>
+            <div class="scroll-cue">
+                <div class="scroll-arrow"></div>
+            </div>
+        </section>
+
+        <!-- CONTENT (flows naturally, no forced heights) -->
+        <div class="content">
+
+            <!-- DATE STRIP -->
+            <div class="date-strip rv">
+                <div class="ds-item">
+                    <span class="ds-big">26</span>
+                    <span class="ds-label">JUNIO</span>
+                </div>
+                <div class="ds-sep"></div>
+                <div class="ds-item">
+                    <span class="ds-big">7PM</span>
+                    <span class="ds-label">INICIO</span>
+                </div>
+                <div class="ds-sep"></div>
+                <div class="ds-item">
+                    <span class="ds-big">3AM</span>
+                    <span class="ds-label">FINAL</span>
+                </div>
+            </div>
+
+            <!-- HYPE -->
+            <div class="hype rv">
+                <p class="hype-label">ESTÁS INVITADO A</p>
+                <h2 class="hype-title">LA NOCHE<br>MÁS LOCA<br>DEL AÑO</h2>
+                <p class="hype-desc">Música. Descontrol. Piscina.<br>Lo que pase aquí, se queda aquí.</p>
+            </div>
+
+            <!-- RULES STRIP -->
+            <div class="rules rv">
+                <div class="rule">
+                    <span class="rule-icon">🔞</span>
+                    <span class="rule-text">Solo mayores</span>
+                </div>
+                <div class="rule-sep"></div>
+                <div class="rule">
+                    <span class="rule-icon">👕</span>
+                    <span class="rule-text">Casual / Urbano</span>
+                </div>
+                <div class="rule-sep"></div>
+                <div class="rule">
+                    <span class="rule-icon">🚫</span>
+                    <span class="rule-text">Prohibido aburrirse</span>
+                </div>
+            </div>
+
+            <!-- LOCATION -->
+            <div class="location rv">
+                <p class="loc-label">UBICACIÓN</p>
+                <a href="https://www.google.com/maps?q=10.073340,-69.278389" target="_blank" rel="noopener noreferrer" class="loc-btn">
+                    <span class="loc-pin">📍</span>
+                    <span>VER EN GOOGLE MAPS</span>
+                </a>
+            </div>
+
+            <!-- DIVIDER -->
+            <div class="red-divider rv"></div>
+
+            <!-- CONFIRM -->
+            <div class="confirm rv">
+                <img src="1.jpeg" alt="Pase" class="confirm-ticket">
+                <h2 class="confirm-title">¿ESTÁS<br>EN LA LISTA?</h2>
+                <p class="confirm-desc">Confirma tu asistencia para asegurar tu entrada.</p>
+                <button id="btn-rsvp" class="confirm-btn">CONFIRMAR POR WHATSAPP</button>
+            </div>
+
+            <!-- FOOTER -->
+            <footer class="site-footer">
+                <img src="o.png" alt="Project X" class="footer-logo">
+                <p>© 2026 — Derecho de admisión reservado</p>
+            </footer>
+        </div>
+    </div>
+
+    <!-- MODAL -->
+    <div id="rsvp-modal" class="modal-bg">
+        <div class="modal-card">
+            <h3 class="modal-title">CONFIRMANDO...</h3>
+            <p class="modal-msg">Preparando tu pase de entrada.</p>
+            <div class="modal-bar"><div id="modal-fill" class="modal-fill"></div></div>
+            <p id="modal-status" class="modal-status">Procesando...</p>
+            <div id="modal-info" class="modal-info hidden"></div>
+            <button id="btn-wa" class="modal-wa hidden">ABRIR WHATSAPP</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
