@@ -28,7 +28,7 @@
        ================================ */
     unlock.addEventListener('click', function () {
         /* Start music a bit ahead so the beat hits during intro */
-        music.currentTime = 12;
+        music.currentTime = 26;
         music.volume = 0;
         music.play().catch(function () {});
         if (heroVideo) heroVideo.play().catch(function () {});
